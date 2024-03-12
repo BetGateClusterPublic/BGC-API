@@ -92,6 +92,7 @@ GT feed operates with the following entities:
 * markets
 * markets results
 * scores
+
 To see extensive details for GT feed data structures please see the [GT domain](GT-DOMAIN.md) page.
 
 While the GT feed integration flow is straightforward from sport category to tournament event up to market with market results, the most tricky part lays in building the content for users. Every market has a selection key that can be used together with Translations API to get the exact name for the market. For more details see [GT APIs](GT-APIS.md) page.
