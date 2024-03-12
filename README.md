@@ -30,28 +30,28 @@ BGC, which stands for Betting Gateway Cluster, is a cutting-edge platform that r
 
 ## Key Features
 
-Unified API Integration
+**Unified API Integration**
 : BGC seamlessly integrates with the most reliable traders, consolidating their feeds into a unified and managed API. This allows operators to access a wide range of betting data through a single interface, simplifying the integration process and reducing the complexity of managing multiple APIs.
 
-Real-Time Data Aggregation
+**Real-Time Data Aggregation**
 : The platform offers real-time data aggregation, ensuring that operators have access to the latest odds, scores, and other relevant information. This capability is crucial for businesses who require up-to-the-minute data to make informed decisions in the fast-paced world of iGaming.
 
-Customizable Feeds
+**Customizable Feeds**
 : BGC empowers operators to tailor their data feeds according to their specific needs. Whether it's focusing on particular sports, events, or types of bets, the platform allows for customization, providing a personalized experience for operators.
 
-Reliable Odds Compilation
+**Reliable Odds Compilation**
 : BGC ensures the reliability of odds by aggregating data from multiple sources. This not only enhances the accuracy of the information but also helps operators identify the best odds available in the market, ultimately optimizing their betting strategies.
 
-Scalability and Flexibility
+**Scalability and Flexibility**
 : BGC is designed to scale effortlessly, accommodating the growing needs of businesses. Its flexible architecture enables easy integration with existing systems and supports future enhancements, making it a robust solution for diverse stakeholders in the iGaming industry.
 
-Comprehensive Analytics
+**Comprehensive Analytics**
 : The platform includes robust analytics tools that empower users to gain insights into betting trends, market fluctuations, and user behavior. These analytics not only aid in strategic decision-making but also contribute to refining betting strategies for improved outcomes.
 
-Secure and Compliant
+**Secure and Compliant**
 : BGC prioritizes security and compliance, implementing industry-standard protocols to safeguard user data and transactions. The platform adheres to relevant regulations, providing a trustworthy environment for businesses and users alike.
 
-Data Recovery
+**Data Recovery**
 : BGC provides APIs that allow operators to recover their data at any time, whether they're starting a new environment, experiencing live data losses, or facing extended downtime on their end.
 
 ## BGC API anatomy
