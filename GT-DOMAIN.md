@@ -382,6 +382,8 @@ Created → Cancelled
 | Postponed   |         | ->      |        |          |         |           |             |           |           |
 
 ## Scores
+See full GT domain documentation pages for scores stages and periods per sport.
+
 <details>
   <summary>Scoreboard JSON description:</summary>
 
@@ -473,29 +475,18 @@ Created → Cancelled
 </details>
 
 ## Markets
-Market Trading Types: 
-* "Match"
-* "UniEvent"
-* "Tournament"
-* "Comparison"
-* "HomeAway"
-* "Corners"
-* "YellowCards"
-* "Fouls"
-* "ShotsAll"
-* "ShotsOnTarget"
-* "MatchStat"
-* "Offsides"
-* "BallPossessions"
-* "SOG"
-* "PIM"
-* "Aces"
-* "DoubleFaults"
-* "ThreePoints"
-* "Rebounds"
-* "Assists"
-* "Steals"
-* "Statistics"
+See full GT domain documentation pages for market types, periods and result kinds per sport.
+
+### Market outcome selection key structure
+```
+[1,[2,3],[4,5],6,7,[8,9]]
+```
+* 1 - it's a marketType or marketId, which is described for every sport kind
+* 2 and 3 - it's a market values
+* 4 and 5 - is a market periods
+* 6 - resultKind
+* 7 - outcomeId
+* 8 and 9 - outcome Parameters
 
 <details>
   <summary>Market JSON description:</summary>

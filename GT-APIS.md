@@ -4,8 +4,8 @@
 
 ## Translation API
 Body of request: Array of selection keys in format "Sport_OutcomeSelectionKey" - for example:
-- ["Football_[14,[3],[0],66,11,[]]"]
-- ["Football_[14,[3],[0],66,11,[]]", "F_[2,[],[0],1,3,[]]"]
+- ["F_[14,[3],[0],66,11,[]]"]
+- ["F_[14,[3],[0],66,11,[]]", "F_[2,[],[0],1,3,[]]"]
 
 <details>
   <summary>Request JSON schema:</summary>
@@ -223,33 +223,53 @@ Body of request: Array of selection keys in format "Sport_OutcomeSelectionKey" -
 Retrieve translation for requested language.
 
 ```
-curl -X POST https://public-api-stage-hz.betgate.dev/apt/gt/translate/selections/en -H "Content-Type: application/json" -H "X-Api-Key: 6b4314aa-638b-4f8b-a0eb-d17f830fc32a" "[\"Football_[14,[3],[0],66,11,[]]\",\"Basketball_[145,[],[0],1,3,[]]\"]"
+curl -X POST https://public-api-stage-hz.betgate.dev/apt/gt/translate/selections/en -H "Content-Type: application/json" -H "X-Api-Key: 6b4314aa-638b-4f8b-a0eb-d17f830fc32a" "[\"F_[14,[3],[0],66,11,[]]\",\"B_[145,[],[0],1,3,[]]\"]"
 ```
 ```json
 [
   {
-    "key": "Football_[14,[3],[0],66,11,[]]",
+    "key": "F_[14,[3],[0],66,11,[]]",
     "item": {
-      "market": [
-        "Shots on target. Race to N",
-        ""
-      ],
-      "text": "3: {Team1}",
-      "competitor": [],
-      "textShort": "3: 1"
+      "market": {
+        "en": [
+          "Shots on target. Race to N",
+          ""
+        ]
+      },
+      "text": {
+        "en": [
+          "3: {Team1}"
+        ]
+      },
+      "competitor": {},
+      "textShort": {
+        "en": [
+          "3: 1"
+        ]
+      }
     },
     "isTranslated": false
   },
   {
-    "key": "Basketball_[145,[],[0],1,3,[]]",
+    "key": "B_[145,[],[0],1,3,[]]",
     "item": {
-      "market": [
-        "To win including overtime",
-        ""
-      ],
-      "text": "{Team2}",
-      "competitor": [],
-      "textShort": "2"
+      "market": {
+        "en": [
+          "To win including overtime",
+          ""
+        ]
+      },
+      "text": {
+        "en": [
+          "{Team2}"
+        ]
+      },
+      "competitor": {},
+      "textShort": {
+        "en": [
+          "2"
+        ]
+      }
     },
     "isTranslated": false
   }
@@ -260,103 +280,86 @@ curl -X POST https://public-api-stage-hz.betgate.dev/apt/gt/translate/selections
 Retrieve translations for all languages.
 
 ```
-curl -X POST https://public-api-stage-hz.betgate.dev/apt/gt/translate/selections -H "Content-Type: application/json" -H "X-Api-Key: 6b4314aa-638b-4f8b-a0eb-d17f830fc32a" "[\"Football_[14,[3],[0],66,11,[]]\",\"Basketball_[145,[],[0],1,3,[]]\"]"
+curl -X POST https://public-api-stage-hz.betgate.dev/apt/gt/translate/selections -H "Content-Type: application/json" -H "X-Api-Key: 6b4314aa-638b-4f8b-a0eb-d17f830fc32a" "[\"F_[14,[3],[0],66,11,[]]\",\"B_[145,[],[0],1,3,[]]\"]"
 ```
 ```json
 [
   {
-    "key": "Football_[14,[3],[0],66,11,[]]",
+    "key": "F_[14,[3],[0],66,11,[]]",
     "item": {
-      "key": null,
       "market": {
-        "ru": [
-          "Удары в створ. Первый до N",
+        "bn": [
+          "টার্গেটে শট. N পর্যন্ত রেস",
           ""
         ],
         "en": [
           "Shots on target. Race to N",
           ""
         ],
-        "uk": [
-          "Удари в площину. Перший до N",
-          ""
-        ],
         "es": [
-          "Удары в створ. Primero en llegar a N",
-          ""
-        ],
-        "pt": [
-          "Chutes ao gol. Corrida para N",
-          ""
-        ],
-        "fr": [
-          "Удары в створ. Race to N",
-          ""
-        ],
-        "ro": [
-          "Șuturi în poartă. Cursa la N",
-          ""
-        ],
-        "kk": [
-          "Тұстамаға соғылған доптар. Біріншісі N дейін",
-          ""
-        ],
-        "en-ca": [
-          "Shots on target. Race to N",
-          ""
-        ],
-        "fr-ca": [
-          "Shots on target. Race to N",
-          ""
-        ],
-        "sb_ru": [
-          "Удары в створ. Первый до N",
-          ""
-        ],
-        "sb_en": [
-          "Shots on target. Race to N",
-          ""
-        ],
-        "sb_uk": [
-          "Удари в площину. Перший до N",
-          ""
-        ],
-        "bn": [
-          "টার্গেটে শট. N পর্যন্ত রেস",
-          ""
-        ],
-        "hi": [
-          "Удары в створ. एन (N) तक रेस",
-          ""
-        ],
-        "vi": [
-          "Sút trúng mục tiêu. Đua đến N",
-          ""
-        ],
-        "th": [
-          "ยิงเข้าเป้า. คนแรกที่ N",
-          ""
-        ],
-        "ms": [
-          "Tembakan tepat. Perlumbaan ke N",
-          ""
-        ],
-        "zh": [
-          "射正. 赛至 N",
+          "Disparos a puerta. Primero en llegar a N",
           ""
         ],
         "fa": [
           "شوت در چارچوب. رسیدن به N",
           ""
         ],
-        "ru-uz": [
-          "Удары в створ. Первый до 3",
+        "fr": [
+          "Tirs cadrés. Premier à N",
+          ""
+        ],
+        "hi": [
+          "टारगेट. एन (N) तक रेस",
+          ""
+        ],
+        "kk": [
+          "Қақпаға бағытталған соққы. Біріншісі N дейін",
+          ""
+        ],
+        "ms": [
+          "Tembakan tepat. Perlumbaan ke N",
+          ""
+        ],
+        "pt": [
+          "Chutes no gol. Primeiro a chegar №.",
+          ""
+        ],
+        "ro": [
+          "Lovituri la poartă. Cursa la N",
+          ""
+        ],
+        "ru": [
+          "Удары в створ. Первый до N",
+          ""
+        ],
+        "th": [
+          "ยิงเข้าเป้า. คนแรกที่ N",
+          ""
+        ],
+        "uk": [
+          "Удари в площину. Перший до N",
           ""
         ],
         "uz": [
           "Удары в створ. Birinchi gacha 3",
           ""
         ],
+        "vi": [
+          "Sút trúng mục tiêu. Đua đến N",
+          ""
+        ],
+        "zh": [
+          "射正. 赛至 N",
+          ""
+        ],
+        "en-ca": [
+          "Shots on target. Race to N",
+          ""
+        ],
+        "en_gh": [
+          "Shots on target. Race to N",
+          ""
+        ],
         "en_ng": [
           "Shots on target. Race to N",
           ""
@@ -365,109 +368,170 @@ curl -X POST https://public-api-stage-hz.betgate.dev/apt/gt/translate/selections
           "Shots on target. Race to N",
           ""
         ],
-        "en_gh": [
+        "fr-ca": [
+          "Tirs cadrés. Premier à N",
+          ""
+        ],
+        "ru-uz": [
+          "Удары в створ. Первый до 3",
+          ""
+        ],
+        "sb_en": [
           "Shots on target. Race to N",
+          ""
+        ],
+        "sb_ru": [
+          "Удары в створ. Первый до N",
+          ""
+        ],
+        "sb_uk": [
+          "Удари в площину. Перший до N",
           ""
         ]
       },
       "text": {
-        "ru": [
+        "bn": [
           "3: {Team1}"
         ],
         "en": [
           "3: {Team1}"
         ],
-        "uk": [
+        "es": [
           "3: {Team1}"
         ],
-        "es": [
-          ""
-        ],
-        "pt": [
+        "fa": [
           "3: {Team1}"
         ],
         "fr": [
-          ""
-        ],
-        "ro": [
-          "3: {Team1}"
-        ],
-        "kk": [
-          "3: {Team1}"
-        ],
-        "en-ca": [
-          "3: {Team1}"
-        ],
-        "fr-ca": [
-          "3: {Team1}"
-        ],
-        "sb_ru": [
-          "3: П1"
-        ],
-        "sb_en": [
-          "3: 1"
-        ],
-        "sb_uk": [
-          "3: П1"
-        ],
-        "bn": [
           "3: {Team1}"
         ],
         "hi": [
           "3: {Team1}"
         ],
-        "vi": [
-          "3: {Team1}"
-        ],
-        "th": [
+        "kk": [
           "3: {Team1}"
         ],
         "ms": [
           "3: {Team1}"
         ],
-        "zh": [
+        "pt": [
           "3: {Team1}"
         ],
-        "fa": [
+        "ro": [
+          "3: {Team1}"
+        ],
+        "ru": [
+          "3: {Team1}"
+        ],
+        "th": [
+          "3: {Team1}"
+        ],
+        "uk": [
           "3: {Team1}"
         ],
         "uz": [
           "3: {Team1}"
         ],
-        "en_ng": [
+        "vi": [
           "3: {Team1}"
         ],
-        "en_tz": [
+        "zh": [
+          "3: {Team1}"
+        ],
+        "en-ca": [
           "3: {Team1}"
         ],
         "en_gh": [
+          ""
+        ],
+        "en_ng": [
+          ""
+        ],
+        "en_tz": [
+          ""
+        ],
+        "fr-ca": [
           "3: {Team1}"
+        ],
+        "sb_en": [
+          "3: 1"
+        ],
+        "sb_ru": [
+          "3: П1"
+        ],
+        "sb_uk": [
+          "3: П1"
         ]
       },
+      "competitor": {
+        "bn": [],
+        "en": [],
+        "es": [],
+        "fa": [],
+        "fr": [],
+        "hi": [],
+        "kk": [],
+        "ms": [],
+        "pt": [],
+        "ro": [],
+        "ru": [],
+        "th": [],
+        "uk": [],
+        "uz": [],
+        "vi": [],
+        "zh": [],
+        "en-ca": [],
+        "en_gh": [],
+        "en_ng": [],
+        "en_tz": [],
+        "fr-ca": [],
+        "ru-uz": [],
+        "sb_en": [],
+        "sb_ru": [],
+        "sb_uk": []
+      },
       "textShort": {
+        "bn": [
+          "3: 1"
+        ],
+        "en": [
+          "3: 1"
+        ],
+        "es": [
+          "3: 1"
+        ],
+        "fa": [
+          "3: 1"
+        ],
+        "fr": [
+          "3: 1"
+        ],
+        "kk": [
+          "3: П1"
+        ],
+        "ms": [
+          "3: 1"
+        ],
+        "pt": [
+          "3: 1"
+        ],
+        "ro": [
+          "3: 1"
+        ],
         "ru": [
           "3: П1"
         ],
-        "en": [
+        "th": [
           "3: 1"
         ],
         "uk": [
           "3: П1"
         ],
-        "es": [
-          ""
+        "vi": [
+          "3: {Team1}"
         ],
-        "pt": [
+        "zh": [
           "3: 1"
-        ],
-        "fr": [
-          ""
-        ],
-        "ro": [
-          "3: 1"
-        ],
-        "kk": [
-          "3: П1"
         ],
         "en-ca": [
           "3: 1"
@@ -475,68 +539,22 @@ curl -X POST https://public-api-stage-hz.betgate.dev/apt/gt/translate/selections
         "fr-ca": [
           "3: 1"
         ],
-        "sb_ru": [
-          "3: П1"
-        ],
         "sb_en": [
           "3: 1"
         ],
-        "sb_uk": [
+        "sb_ru": [
           "3: П1"
         ],
-        "bn": [
-          "3: 1"
-        ],
-        "vi": [
-          "3: {Team1}"
-        ],
-        "th": [
-          "3: 1"
-        ],
-        "ms": [
-          "3: 1"
-        ],
-        "zh": [
-          "3: 1"
-        ],
-        "fa": [
-          "3: 1"
+        "sb_uk": [
+          "3: П1"
         ]
-      },
-      "competitor": {
-        "ru": [],
-        "en": [],
-        "uk": [],
-        "es": [],
-        "pt": [],
-        "fr": [],
-        "ro": [],
-        "kk": [],
-        "en-ca": [],
-        "fr-ca": [],
-        "sb_ru": [],
-        "sb_en": [],
-        "sb_uk": [],
-        "bn": [],
-        "hi": [],
-        "vi": [],
-        "th": [],
-        "ms": [],
-        "zh": [],
-        "fa": [],
-        "ru-uz": [],
-        "uz": [],
-        "en_ng": [],
-        "en_tz": [],
-        "en_gh": []
       }
     },
     "isTranslated": false
   },
   {
-    "key": "Basketball_[145,[],[0],1,3,[]]",
+    "key": "B_[145,[],[0],1,3,[]]",
     "item": {
-      "key": null,
       "market": {
         "ru": [
           "Победа с учетом овертайма",
@@ -555,15 +573,15 @@ curl -X POST https://public-api-stage-hz.betgate.dev/apt/gt/translate/selections
           ""
         ],
         "pt": [
-          "A vencer incluindo o tempo extra",
+          "Vencedor (incl. prolongamento)",
           ""
         ],
         "fr": [
-          "To win including overtime",
+          "Gagner (incluent les prolongations)",
           ""
         ],
         "ro": [
-          "Victorie inclusiv cu prelungiri",
+          "Pentru a câștiga inclusiv prelungiri",
           ""
         ],
         "kk": [
@@ -575,7 +593,7 @@ curl -X POST https://public-api-stage-hz.betgate.dev/apt/gt/translate/selections
           ""
         ],
         "fr-ca": [
-          "To win including overtime",
+          "Gagner (incluent les prolongations)",
           ""
         ],
         "sb_ru": [
@@ -656,7 +674,7 @@ curl -X POST https://public-api-stage-hz.betgate.dev/apt/gt/translate/selections
           "{Team2}"
         ],
         "fr": [
-          ""
+          "{Team2}"
         ],
         "ro": [
           "{Team2}"
@@ -683,7 +701,7 @@ curl -X POST https://public-api-stage-hz.betgate.dev/apt/gt/translate/selections
           "{Team2}"
         ],
         "hi": [
-          "{टीम 2}"
+          "{Team2}"
         ],
         "vi": [
           "{Team2}"
@@ -704,72 +722,13 @@ curl -X POST https://public-api-stage-hz.betgate.dev/apt/gt/translate/selections
           "{Team2}"
         ],
         "en_ng": [
-          "{Team2}"
+          ""
         ],
         "en_tz": [
-          "{Team2}"
+          ""
         ],
         "en_gh": [
-          "{Team2}"
-        ]
-      },
-      "textShort": {
-        "ru": [
-          "П2"
-        ],
-        "en": [
-          "2"
-        ],
-        "uk": [
-          "П2"
-        ],
-        "es": [
           ""
-        ],
-        "pt": [
-          "2"
-        ],
-        "fr": [
-          ""
-        ],
-        "ro": [
-          "2"
-        ],
-        "kk": [
-          "П2"
-        ],
-        "en-ca": [
-          "2"
-        ],
-        "fr-ca": [
-          "2"
-        ],
-        "sb_ru": [
-          "П2"
-        ],
-        "sb_en": [
-          "2"
-        ],
-        "sb_uk": [
-          "П2"
-        ],
-        "bn": [
-          "2"
-        ],
-        "vi": [
-          "{Team2}"
-        ],
-        "th": [
-          "2"
-        ],
-        "ms": [
-          "2"
-        ],
-        "zh": [
-          "2"
-        ],
-        "fa": [
-          "2"
         ]
       },
       "competitor": {
@@ -798,6 +757,65 @@ curl -X POST https://public-api-stage-hz.betgate.dev/apt/gt/translate/selections
         "en_ng": [],
         "en_tz": [],
         "en_gh": []
+      },
+      "textShort": {
+        "ru": [
+          "П2"
+        ],
+        "en": [
+          "2"
+        ],
+        "uk": [
+          "П2"
+        ],
+        "es": [
+          "2"
+        ],
+        "pt": [
+          "2"
+        ],
+        "fr": [
+          "2"
+        ],
+        "ro": [
+          "2"
+        ],
+        "kk": [
+          "П2"
+        ],
+        "en-ca": [
+          "1"
+        ],
+        "fr-ca": [
+          "1"
+        ],
+        "sb_ru": [
+          "П2"
+        ],
+        "sb_en": [
+          "2"
+        ],
+        "sb_uk": [
+          "П2"
+        ],
+        "bn": [
+          "2"
+        ],
+        "vi": [
+          "{Team2}"
+        ],
+        "th": [
+          "2"
+        ],
+        "ms": [
+          "2"
+        ],
+        "zh": [
+          "2"
+        ],
+        "fa": [
+          "2"
+        ]
       }
     },
     "isTranslated": false
