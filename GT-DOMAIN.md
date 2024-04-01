@@ -382,7 +382,7 @@ Created → Cancelled
 | Postponed   |         | ->      |        |          |         |           |             |           |           |
 
 ## Scores
-See full GT domain documentation pages for scores stages and periods per sport.
+See full GT domain documentation pages for scores stages and periods per sport at https://api-docs.betgate.dev/score_description/index.html.
 
 <details>
   <summary>Scoreboard JSON description:</summary>
@@ -475,7 +475,7 @@ See full GT domain documentation pages for scores stages and periods per sport.
 </details>
 
 ## Markets
-See full GT domain documentation pages for market types, periods and result kinds per sport.
+See full GT domain documentation pages for market types, periods and result kinds per sport at https://api-docs.betgate.dev/markets_description/index.html.
 
 ### Market outcome selection key structure
 ```
