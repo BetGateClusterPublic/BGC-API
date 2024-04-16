@@ -223,7 +223,7 @@ Body of request: Array of selection keys in format "Sport_OutcomeSelectionKey" -
 Retrieve translation for requested language.
 
 ```
-curl -X POST https://public-api-stage-hz.betgate.dev/apt/gt/translate/selections/en -H "Content-Type: application/json" -H "X-Api-Key: 6b4314aa-638b-4f8b-a0eb-d17f830fc32a" "[\"F_[14,[3],[0],66,11,[]]\",\"B_[145,[],[0],1,3,[]]\"]"
+curl -X POST https://public-api-stage-hz.betgate.dev/api/gt/translate/selections/en -H "Content-Type: application/json" -H "X-Api-Key: 6b4314aa-638b-4f8b-a0eb-d17f830fc32a" -d "[\"F_[14,[3],[0],66,11,[]]\",\"B_[145,[],[0],1,3,[]]\"]"
 ```
 ```json
 [
@@ -280,7 +280,7 @@ curl -X POST https://public-api-stage-hz.betgate.dev/apt/gt/translate/selections
 Retrieve translations for all languages.
 
 ```
-curl -X POST https://public-api-stage-hz.betgate.dev/apt/gt/translate/selections -H "Content-Type: application/json" -H "X-Api-Key: 6b4314aa-638b-4f8b-a0eb-d17f830fc32a" "[\"F_[14,[3],[0],66,11,[]]\",\"B_[145,[],[0],1,3,[]]\"]"
+curl -X POST https://public-api-stage-hz.betgate.dev/api/gt/translate/selections -H "Content-Type: application/json" -H "X-Api-Key: 6b4314aa-638b-4f8b-a0eb-d17f830fc32a" -d "[\"F_[14,[3],[0],66,11,[]]\",\"B_[145,[],[0],1,3,[]]\"]"
 ```
 ```json
 [
