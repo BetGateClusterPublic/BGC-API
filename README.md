@@ -72,13 +72,7 @@ imed to provide it's customers with data recovery and historical data access.
 ### Data recovery flows
 No matter if it's environment cold start or live data loss, any entity can be re-requested by it's id.
 
-### Historical data access
-// TODO
-
 ## Integration flow
-### RabbitMQ binding schemas
-// TODO
-
 ## Trading feeds
 Trading feeds represent technical events and related bettable content in a form of upcoming, live and historical data. 
 Each Trading feed is backed by it's own trading and scout tools forming up trader specific domain, market types and data structures. Every single Trading feed API is composed from general domain documentation and repositories defining data structures and transfer objects.
@@ -111,9 +105,6 @@ While the GT feed integration flow is straightforward from sport category to tou
 > Under construction
 
 [//]: # (To see Client Console UI examples along with platform operator guide please see the [client console guide]&#40;CLIENT-CONSOLE-GUIDE.md&#41;.)
-
-## Risk management flows
-> Under construction
 
 ## Support policies
 > Under construction
