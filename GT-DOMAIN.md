@@ -475,6 +475,8 @@ See full GT domain documentation pages for scores stages and periods per sport a
 </details>
 
 ## Markets
+The most important part regarding markets is that they always arrive as a snapshot of currently open or suspended markets. Thus, if a market from the previous snapshot is missing in later update, it means that market was closed and is not available for betting.
+
 See full GT domain documentation pages for market types, periods and result kinds per sport at https://api-docs.betgate.dev/markets_description/index.html.
 
 ### Market outcome selection key structure
