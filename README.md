@@ -90,21 +90,3 @@ GT feed operates with the following entities:
 To see extensive details for GT feed data structures please see the [GT domain](GT-DOMAIN.md) page.
 
 While the GT feed integration flow is straightforward from sport category to tournament event up to market with market results, the most tricky part lays in building the content for users. Every market has a selection key that can be used together with Translations API to get the exact name for the market. For more details see [GT APIs](GT-APIS.md) page.
-
-### BT feed
-> Under construction
-
-[//]: # (To see extensive details for BT feed data structures please see the [BT domain]&#40;BT-DOMAIN.md&#41; page.)
-
-### ST feed
-> Under construction
-
-[//]: # (To see extensive details for ST feed data structures please see the [ST domain]&#40;ST-DOMAIN.md&#41; page.)
-
-## Client Console Guide
-> Under construction
-
-[//]: # (To see Client Console UI examples along with platform operator guide please see the [client console guide]&#40;CLIENT-CONSOLE-GUIDE.md&#41;.)
-
-## Support policies
-> Under construction
